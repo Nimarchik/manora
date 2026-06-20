@@ -44,6 +44,36 @@ function showMessage(text) {
   message.classList.add("show");
 }
 
+
+function createMoon() {
+  const moon = document.createElement("div");
+  moon.classList.add("moon");
+  moon.textContent = "❤";
+
+  moon.style.left = Math.random() * window.innerWidth + "px";
+  moon.style.fontSize = (20 + Math.random() * 40) + "px";
+  moon.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+  document.getElementById("moon-container").appendChild(moon);
+
+  setTimeout(() => {
+    moon.remove();
+  }, 7000);
+}
+
+function moonRain() {
+  let count = 0;
+
+  const interval = setInterval(() => {
+    createMoon();
+    count++;
+
+    if (count >= 150) { // количество лун
+      clearInterval(interval);
+    }
+  }, 100);
+}
+
 function checkAnswer() {
   inp.addEventListener('keydown', (event) => {
     if (event.key === "Enter") {
@@ -52,6 +82,7 @@ function checkAnswer() {
       if (answer === "настолько красивая, что умереть можно") {
         // message.textContent = `${inp.value} - это значит что наши чувства взаимны)`
         showMessage(`${inp.value} - это значит что наши чувства взаимны)`)
+        moonRain();
         message.style.opacity = 1
         message.style.fontFamily = "Caveat", cursive;
       } else {
@@ -69,3 +100,6 @@ inp.addEventListener("keyup", (event) => {
     checkAnswer();
   }
 });
+
+const moonAnimation = document.querySelector("#moonAnimation");
+
