@@ -294,6 +294,7 @@ a img.icon {
   margin-bottom: 40px;
   text-decoration: none;
   text-transform: none;
+  margin-bottom: 20px;
 }
 
 .linkNew::before {
@@ -313,4 +314,8 @@ a img.icon {
 
 .--active4 {
   opacity: 1;
+}
+
+.linkBlockTitle {
+  font-size: 16px;
 }
