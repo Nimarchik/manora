@@ -278,12 +278,39 @@ a {
   margin-left: 1em;
 }
 
-a:hover {
-  text-decoration: underline;
-}
+
 
 a img.icon {
   display: inline-block;
   height: 1em;
   margin: 0 0 -0.1em 0.3em;
+}
+
+.linkNew {
+  position: relative;
+  color: white;
+  opacity: 0;
+  height: 50px;
+  margin-bottom: 40px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.linkNew::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  background-color: white;
+  z-index: 1;
+}
+
+.linkNew:hover {
+  filter: drop-shadow(0 0 50px white);
+}
+
+.--active4 {
+  opacity: 1;
 }

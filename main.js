@@ -107,12 +107,16 @@ let text = document.querySelector('.text_contentSub')
 let text1 = document.querySelector('.text_contentSub1')
 let text2 = document.querySelector('.text_contentSub2')
 let text3 = document.querySelector('.text_contentSub3')
+let text4 = document.querySelector('.linkNew')
+
 
 vis.addEventListener('click', () => {
   text.classList.toggle('--active')
   text1.classList.toggle('--active1')
   text2.classList.toggle('--active2')
   text3.classList.toggle('--active3')
+  text4.classList.toggle('--active4')
+
 
 })
 
