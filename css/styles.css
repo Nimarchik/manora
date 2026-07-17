@@ -289,8 +289,7 @@ a img.icon {
 .linkNew {
   position: relative;
   color: white;
-  opacity: 0;
-  height: 50px;
+  opacity: 1;
   margin-bottom: 40px;
   text-decoration: none;
   text-transform: none;
@@ -316,6 +315,13 @@ a img.icon {
   opacity: 1;
 }
 
+.linkBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .linkBlockTitle {
+
   font-size: 16px;
 }
